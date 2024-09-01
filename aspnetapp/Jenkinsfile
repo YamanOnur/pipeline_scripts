@@ -20,7 +20,7 @@ pipeline {
           stage('docker build') {
                         steps {
                                 script {
-                                        sh "cp " + pipelineDirectory + "/${job_name}/Dockerfile ."
+                                        sh "cp " + pipelineDirectory + "/Dockerfile ."
                                         sh "docker build . --build-arg APPLICATION=${job_name} -t ${env.REGISTRY_HOST}/${job_name}:master-v${env.BUILD_ID}"
                                 }
                         }
