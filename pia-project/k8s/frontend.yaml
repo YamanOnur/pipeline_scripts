@@ -73,7 +73,7 @@ spec:
   - name: http
     port: 80
     targetPort: 8080
-    nodePort: 300001
+    nodePort: 30001
 ---
 # Removed the external LoadBalancer service since it's cloud-specific
 
